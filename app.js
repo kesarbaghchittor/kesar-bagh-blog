@@ -11,3 +11,6 @@ if("IntersectionObserver"in window){
  const motionMutations=new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>{if(node.nodeType===1){if(node.matches?.(motionSelector)){node.classList.add("motion-reveal");motionObserver.observe(node)}scanMotion(node)}})));
  motionMutations.observe(document.body,{childList:true,subtree:true});
 }else{document.querySelectorAll(motionSelector).forEach(el=>el.classList.add("in-view"))}
+
+/* Ensure the newly added palace film section participates in scroll reveal. */
+if(motionObserver){const filmSection=document.querySelector(".palace-film-section");if(filmSection){filmSection.classList.add("motion-reveal");motionObserver.observe(filmSection)}}
