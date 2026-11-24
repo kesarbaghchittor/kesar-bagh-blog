@@ -13,3 +13,22 @@
 @keyframes copyRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}@keyframes sectionRise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}@keyframes pageFade{from{opacity:0}to{opacity:1}}@keyframes sealFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes slowSpin{to{transform:rotate(360deg)}}
 @media(max-width:720px){.brand-logo{width:112px;max-height:42px}.brand-caption{padding-left:9px}.brand-caption strong{font-size:7px}.brand-caption small{font-size:6px}.site-header nav{z-index:60}.hero-copy>*{animation-duration:.65s}.experience-card:hover{transform:none}.article-shell .site-header{padding:0 5%}}
 @media(prefers-reduced-motion:reduce){.motion-ready .motion-reveal{opacity:1!important;transform:none!important}.hero-seal,.quote-strip>span,.palace-banner-copy:before{animation:none!important}.experience-card,.post-card,.article-hero img{transition:none!important}}
+
+/* Official Kesar Bagh Palace film */
+.palace-film-section{padding:112px max(calc((100% - 1240px)/2),8%);background:#eee8dd;position:relative;overflow:hidden;text-align:center}
+.palace-film-section:before,.palace-film-section:after{content:"✥";position:absolute;color:#b79b70;opacity:.12;font-size:170px;line-height:1;pointer-events:none}
+.palace-film-section:before{left:-28px;top:24px}.palace-film-section:after{right:-28px;bottom:10px}
+.palace-film-heading{max-width:660px;margin:0 auto 42px;position:relative;z-index:1}
+.palace-film-heading h2{font:500 clamp(42px,5.5vw,68px)/1 "Cormorant Garamond",serif;letter-spacing:-1px;margin:16px 0;color:#30271e}
+.palace-film-heading h2 em{font-weight:400;color:#a47d47}
+.palace-film-heading>p:last-child{max-width:510px;margin:0 auto;color:#766b5d;font-size:12px;line-height:1.9}
+.palace-film-frame{max-width:1120px;margin:0 auto;position:relative;padding:12px;background:linear-gradient(135deg,#c7ad80,#8e7048,#dfcfad);border-radius:34px;box-shadow:0 26px 65px #30271e26;isolation:isolate}
+.palace-film-frame:before{content:"";position:absolute;inset:5px;border:1px solid #fff8;border-radius:29px;pointer-events:none;z-index:2}
+.palace-film{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#251f19;border-radius:25px}
+.film-caption{position:absolute;right:28px;bottom:27px;z-index:3;color:white;font-size:8px;letter-spacing:2px;text-shadow:0 2px 8px #000;pointer-events:none}
+.film-visit-link{display:inline-flex;gap:16px;align-items:center;margin-top:30px;color:#8b6738;font-size:9px;font-weight:700;letter-spacing:1.8px;border-bottom:1px solid #b99b70;padding-bottom:8px;transition:gap .35s,color .35s}
+.film-visit-link:hover{gap:24px;color:#49351e}
+.palace-film-section.in-view .palace-film-frame{animation:filmEnter .9s cubic-bezier(.22,.68,0,1) both}
+@keyframes filmEnter{from{opacity:0;transform:translateY(34px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:700px){.palace-film-section{padding:76px 6%}.palace-film-frame{padding:7px;border-radius:20px}.palace-film-frame:before{inset:3px;border-radius:16px}.palace-film{border-radius:14px;aspect-ratio:4/3}.film-caption{right:15px;bottom:16px;font-size:7px}.palace-film-section:before,.palace-film-section:after{font-size:90px}}
+@media(prefers-reduced-motion:reduce){.palace-film-section.in-view .palace-film-frame{animation:none}}
