@@ -32,3 +32,72 @@
 @keyframes filmEnter{from{opacity:0;transform:translateY(34px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:700px){.palace-film-section{padding:76px 6%}.palace-film-frame{padding:7px;border-radius:20px}.palace-film-frame:before{inset:3px;border-radius:16px}.palace-film{border-radius:14px;aspect-ratio:4/3}.film-caption{right:15px;bottom:16px;font-size:7px}.palace-film-section:before,.palace-film-section:after{font-size:90px}}
 @media(prefers-reduced-motion:reduce){.palace-film-section.in-view .palace-film-frame{animation:none}}
+
+/* Kesar Bagh royal palette — deep wine, antique gold and warm ivory */
+:root{--royal-wine:#4b0d2b;--royal-wine-deep:#39091f;--royal-gold:#c49a3a;--royal-gold-light:#d8b65f;--royal-ivory:#f7f1e8;--royal-ink:#321a25}
+body{background:var(--royal-ivory);color:var(--royal-ink)}
+.topline,footer{background:var(--royal-wine);color:#f0dfb9}
+.topline span{color:var(--royal-gold-light)}
+.site-header{background:#fbf7f0;border-bottom-color:#e4d7c4}
+.site-header nav a:hover,.footer-bottom a:hover{color:var(--royal-gold)}
+.site-header .nav-cta{border-color:var(--royal-gold);color:var(--royal-wine)}
+.brand-caption{border-left-color:var(--royal-gold)}
+.brand-caption strong{color:var(--royal-wine)}
+.brand-caption small{color:#8e766d}
+.brand-logo{filter:brightness(0) saturate(100%) invert(17%) sepia(35%) saturate(1600%) hue-rotate(285deg) brightness(80%) contrast(105%)}
+.brand:hover .brand-logo{filter:brightness(0) saturate(100%) invert(55%) sepia(58%) saturate(550%) hue-rotate(5deg) brightness(95%) contrast(90%)}
+.footer-brand .brand-logo{filter:brightness(0) invert(1)}
+.footer-brand .brand-caption{border-color:var(--royal-gold)}
+.footer-brand .brand-caption strong,.footer-brand .brand-caption small{color:#f0dfb9}
+.hero{background:#eee4d6}
+.hero h1,.section-heading h2,.palace-banner h2{color:var(--royal-wine)}
+.hero h1 em,.section-heading h2 em,.palace-banner h2 em{color:#a77a28}
+.hero-seal{border-color:var(--royal-gold);color:var(--royal-wine);background:#fbf4e8}
+.eyebrow,.text-link,.read-link{color:#9a7026}
+.intro-strip{background:#fbf7f0;border-bottom-color:#e5d8c5}
+.intro-strip>span:first-child,.intro-mark{color:#a77a28}
+.intro-strip p{color:var(--royal-wine)}
+.filter.active,.filter:hover{color:var(--royal-wine);border-bottom-color:var(--royal-gold)}
+.search{border-color:#c9b68f;color:#9a7026}
+.load-more,.button-link{background:var(--royal-wine);color:#fff4df;border-color:var(--royal-gold)}
+.load-more:hover,.button-link:hover{background:var(--royal-wine-deep);color:#fff}
+.palace-banner{background:#eee3d4}
+.quote-strip{background:#efe5d8;color:var(--royal-wine)}
+.quote-strip>span{color:var(--royal-gold)}
+footer{background:var(--royal-wine);color:#f0dfc3}
+footer:before{background:linear-gradient(90deg,transparent,var(--royal-gold),transparent)}
+.footer-visit{border-color:var(--royal-gold);color:#e8d5ae}
+.footer-bottom{border-color:#81516a;color:#d8c2b0}
+.reading-progress{background:var(--royal-gold)}
+.back-to-top{background:var(--royal-gold);color:var(--royal-wine)}
+/* Framed palace gallery inspired by the supplied reference */
+.royal-gallery{position:relative;overflow:hidden;background:var(--royal-wine);color:#f8e9c8;padding:86px max(calc((100% - 1510px)/2),6%) 72px;text-align:center;isolation:isolate}
+.royal-gallery:before{content:"";position:absolute;inset:24px;border:1px solid rgba(202,160,61,.78);outline:1px solid rgba(202,160,61,.3);outline-offset:7px;pointer-events:none;z-index:-1}
+.royal-gallery:after{content:"";position:absolute;inset:38px 31px;background:repeating-linear-gradient(90deg,transparent 0 75px,rgba(202,160,61,.09) 76px 77px,transparent 78px 150px);opacity:.32;pointer-events:none;z-index:-1}
+.gallery-ornament{position:absolute;top:28px;color:var(--royal-gold);font-family:serif;font-size:90px;line-height:1;opacity:.85;pointer-events:none}
+.gallery-ornament-left{left:25px;transform:rotate(-42deg)}.gallery-ornament-right{right:25px;transform:scaleX(-1) rotate(-42deg)}
+.royal-gallery-inner{max-width:1320px;margin:auto;position:relative;z-index:1}
+.royal-gallery-heading{margin:0 auto 38px;max-width:680px}
+.gallery-flourish{display:block;color:var(--royal-gold);font-size:32px;line-height:1;margin-bottom:8px;animation:galleryTurn 18s linear infinite}
+.royal-gallery .eyebrow{color:#d5b45e;margin:0 0 10px}
+.royal-gallery-heading h2{font:500 clamp(34px,3.6vw,52px)/1.05 "Cormorant Garamond",serif;color:#d0a43c;margin:0}
+.royal-gallery-heading h2 em{font-weight:400;color:#e0bd68}
+.royal-gallery-heading>p:last-child{font-size:11px;line-height:1.8;color:#e3cfb5;margin:14px auto 0;max-width:490px}
+.royal-gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(55px,10vw,150px);align-items:end;padding:0 clamp(10px,5vw,70px)}
+.royal-gallery-card{display:block;position:relative;overflow:hidden;height:clamp(340px,38vw,530px);border:1px solid var(--royal-gold);padding:5px;background:rgba(196,154,58,.08);box-shadow:0 18px 45px #21051455;clip-path:polygon(0 100%,0 40%,4% 40%,4% 29%,13% 29%,13% 16%,26% 16%,26% 9%,38% 9%,50% 0,62% 9%,74% 9%,74% 16%,87% 16%,87% 29%,96% 29%,96% 40%,100% 40%,100% 100%)}
+.royal-gallery-card:before{content:"";position:absolute;inset:8px 8px 0;border:1px solid rgba(211,170,76,.75);pointer-events:none;z-index:2;clip-path:inherit}
+.royal-gallery-card img{width:100%;height:100%;display:block;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .7s}
+.royal-gallery-card:hover img{transform:scale(1.055);filter:saturate(1.08) brightness(1.04)}
+.gallery-card-two{height:clamp(340px,35vw,490px)}
+.gallery-card-label{position:absolute;left:18px;bottom:18px;padding:9px 12px;background:rgba(58,8,31,.82);color:#f0d28b;font-size:8px;letter-spacing:1.8px;z-index:3}
+.gallery-controls{display:flex;justify-content:center;gap:45px;margin:20px auto 24px;color:var(--royal-gold);font-size:23px}
+.gallery-dot{display:inline-block;transition:transform .35s}.gallery-dot:hover{transform:rotate(45deg) scale(1.2)}
+.gallery-explore{display:inline-flex;align-items:center;gap:24px;padding:14px 30px;background:var(--royal-gold);color:var(--royal-wine);font-size:9px;font-weight:700;letter-spacing:1px;transition:background .3s,transform .3s,gap .3s}
+.gallery-explore:hover{background:#e1bd65;transform:translateY(-3px);gap:32px}
+.royal-gallery.in-view .royal-gallery-card{animation:galleryRise .9s cubic-bezier(.22,.68,0,1) both}
+.royal-gallery.in-view .gallery-card-two{animation-delay:.16s}
+@keyframes galleryRise{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}
+@keyframes galleryTurn{to{transform:rotate(360deg)}}
+@media(max-width:760px){.royal-gallery{padding:68px 7% 58px}.royal-gallery:before{inset:16px}.gallery-ornament{font-size:48px;top:16px}.gallery-ornament-left{left:12px}.gallery-ornament-right{right:12px}.royal-gallery-heading{margin-bottom:28px}.royal-gallery-heading h2 br{display:none}.royal-gallery-grid{gap:18px;padding:0}.royal-gallery-card,.gallery-card-two{height:clamp(250px,62vw,390px)}.royal-gallery-card{clip-path:polygon(0 100%,0 35%,8% 35%,8% 22%,25% 22%,25% 12%,50% 0,75% 12%,75% 22%,92% 22%,92% 35%,100% 35%,100% 100%)}.gallery-card-label{left:8px;bottom:9px;padding:7px;font-size:6px;letter-spacing:1px}}
+@media(max-width:480px){.royal-gallery-grid{grid-template-columns:1fr;gap:24px;padding:0 8%}.royal-gallery-card,.gallery-card-two{height:370px}.royal-gallery-heading h2{font-size:38px}.gallery-controls{margin:16px auto}}
+@media(prefers-reduced-motion:reduce){.gallery-flourish{animation:none}.royal-gallery.in-view .royal-gallery-card{animation:none;opacity:1}}
